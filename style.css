@@ -1,0 +1,98 @@
+body{
+  background: #e4e4e4;
+}
+* {
+  box-sizing: border-box; /* todas as caixas dos inputs do mesmo tamanho*/
+  /* inclui padding e border */
+}
+.form-container{
+  background: white;
+  margin: 150px auto; /*espaço entre o topo*/
+  width: 400px; /* centralizar e escolher largura da div */
+}
+form {
+  padding: 20px; /*espaço entre conteudo e bordas*/
+}
+form h3 {
+  text-align: center; /* centralizar o texto do h3*/
+}
+form .input-container{
+  position: relative;
+  margin-bottom: 15px;
+}
+form .input-container /*classe para nao alterar tamanho do botao */ input, input[type="submit"] /* alterando, exclusivamente, o botao*/{
+  width: 100%; /* deu 100% de largura em todos os inputs*/
+  height: 40px; /* aumenta largura das input */
+  border-radius: 25px; /* arredondar bordas*/
+}
+input[type="submit"]{
+  border: 0;
+  background: red;
+  color:#ffffff;
+  font-weight: bolder; /* letra negrito*/
+  margin: 20px auto;
+}
+form .input-container input{
+  border: 1px solid  #e4e4e4; /* tam-borda, tipo-borda, cor-borda */
+  color: #818181;
+  padding: 0 55px 0 25px; /* espaço entre texto e borda*/
+  /* tamanho dos padding para o texto nao passar do icon*/
+  font-size: 1rem;
+}
+form .input-container input::placeholder{
+  color:#818181; /*cor do texto de dentro da caixinha*/
+}
+.input-container svg {
+  position: absolute;
+  right: 20px; /*mover para esquerda*/
+  top: calc(50% - 12px); /* centralizar icon no input (caixa)*/
+  color: #818181; /* cor do icon*/
+} 
+.options-container{
+  padding: 0 20px; /* espaço interno entre texto e borda das opcoes*/
+  margin: 25px auto; /* espaço cima/baixo e direita/esquerda */
+  color:#818181; /* alterar cor do "remember me"*/
+}
+.options-container .checkbox-container, .options-container a {
+  display: inline-block; /* deixar os textos na mesma linha*/
+  width: 50%; /* cada div ocupa 50% do tamanho*/
+}
+.options-container a {
+  text-align: right;
+  color: red;
+  text-decoration: none; /* para tirar linha sublinhada do link*/
+}
+p {
+  text-align: center;
+  color: #818181;
+}
+form .social-container {
+  margin: 20px auto; /* tamanho do espaço para pegar para centralizar (pega o tamanho inteiro)*/
+  width: fit-content; /* pega só o espaço que precisa*/
+}
+form .social-container .icon-container { /* container dos icons*/
+  display: inline-block; /* deixar todos na mesma linha (horizontal)*/
+  background: blue; /* cor do primeiro icon*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+form .social-container .icon-container:nth-child(2){ /* alterar cores dos icons (inicia no 1) no caso, esse altera a cor do 2º icon*/
+  background: red;
+}
+form .social-container .icon-container:nth-child(3){ /* esse altera cor do container do 3º icon*/
+  background: #4dadf2;
+}
+form .social-container .icon-container svg {
+  position: absolute; /* icons absolutes em relacao ao container */
+  top: calc(50% - 12px);
+  left:calc(50% - 12px);
+  color: #ffffff;
+}
+form .footer-container {
+  width: fit-content;
+  margin: 20px auto;
+}
+form .footer-container a {
+  color: red;
